@@ -34,12 +34,11 @@
 
                     <div class="collapse navbar-collapse justify-content-evenly" id="navbarTogglerDemo03">
                         <div class="navbar-nav text-center nav-pills ">
-                            <a class="nav-item nav-link text-light px-4" aria-current="page" href="#"><b> Inicio
-                                </b></a>
-                            <a class="nav-item nav-link text-light px-4" href="#introduccion"><b> Introducción </b></a>
-                            <a class="nav-item nav-link text-light px-4" href="#info"><b> Información General </b></a>
-                            <a class="nav-item nav-link text-light px-4" href="#desarrollo"><b> Desarrollo </b></a>
-                            <a class="nav-item nav-link text-light px-4" href="#resultados"><b> Resultados </b></a>
+                            <a class="nav-item nav-link text-light mx-4" aria-current="page" href="#"><b>Inicio</b></a>
+                            <a class="nav-item nav-link text-light mx-4" href="#introduccion"><b>Introducción</b></a>
+                            <a class="nav-item nav-link text-light mx-4" href="#info"><b>Información General</b></a>
+                            <a class="nav-item nav-link text-light mx-4" href="#desarrollo"><b>Desarrollo</b></a>
+                            <a class="nav-item nav-link text-light mx-4" href="#resultados"><b>Resultados</b></a>
                         </div>
                     </div>
                 </div>
@@ -51,69 +50,105 @@
             <h2 class="mt-5 p-5 text-center">Máquina de Dulces</h2>
 
             <p>
-                Este proyecto consiste en realizar un sistema de control con el cual se pueda gestionar los productos ofrecidos por una máquina de dulces empleando el paradigma de la programación orientada a objetos en lenguaje Java. La maquina de dulces a trabajar está dividida por secciones o <b>celdas</b>, y en cada celda están almacenados los productos que dispone la máquina. El usuario podrá realizar una selección múltiple de productos ya sean pertenecientes a la misma celda o de diferentes celdas. <br> <br>
+                Este proyecto consiste en realizar un sistema de control con el cual se pueda gestionar los productos
+                ofrecidos por una máquina de dulces empleando el paradigma de la programación orientada a objetos en
+                lenguaje Java. La maquina de dulces a trabajar está dividida por secciones o <b>celdas</b>, y en cada
+                celda están almacenados los productos que dispone la máquina. El usuario podrá realizar una selección
+                múltiple de productos ya sean pertenecientes a la misma celda o de diferentes celdas. <br> <br>
 
-                La <a href="#fig-1">Figura 1</a>  muestra un pequeño bosquejo de la composición de la máquina de dulces. Se puede apreciar la representación de los productos con elementos de colores dentro de las celdas, y en la parte inferior, los diferentes métodos o acciones que la máquina dispone.<br><br>
+                En el siguiente <a href="#doc">documento</a> podrás encontrar de forma detallada el planteamiento del
+                problema a desarrollar, la estructura de paquetes y caracteristicas de los métodos: <br>
+
+                <center>
+                    <iframe src="./assets/MaquinaDulces.pdf" style="width:100%; height:650px;" id="doc"
+                        class="py-5"></iframe>
+                </center>
             </p>
-
-            <div id="fig-1" class="card px-auto mx-auto" style="width: 100%;">
-                <img src="./assets/machine.svg" class="card-img-top" alt="Candy Machine">
-                <div class="card-body">
-                    <h6 class="card-text text-center"><b>Figura 1.</b> Esquema Máquina de Dulces</h6>
-                </div>
-            </div>
         </section>
 
         <section class="container" id="info">
             <h2 class="mt-5 p-5 text-center">Información General</h2>
 
-            <p>Este proyecto está modelado en un diagrama UML que consta de 4 tablas, se define un objeto tipo
-                Electrodomestico, el cual extiende hacia dos elementos: Televisores y Lavadoras cada uno de los cuales
-                tiene su método independiente de <em>"calcularPrecio()"</em>.</p>
+            <p>
+                Para tener una vista conceptual del sistema descrito en el problema podemos apoyarnos de herramientas
+                visuales como lo son un bosquejo de la máquina de dulces y el respectvo diagrama UML. En ésta sección se
+                detallarán los elementos mensionados. <br><br>
 
-            <p>A continuación, se presenta en la <b>Figura 1</b> el diagrama UML del proyecto:</p>
+                La <a href="#fig-1">Figura 1</a> muestra un pequeño bosquejo de la composición de la máquina de dulces.
+                Se puede apreciar la representación de los productos con elementos de colores dentro de las celdas, y en
+                la parte inferior, los diferentes métodos o acciones que la máquina dispone.
+            </p>
 
-            <div class="card px-auto mx-auto" style="width: 60%;">
+            <div id="fig-1" class="card px-auto mx-auto my-5" style="width: 100%;">
+                <img src="./assets/machine.svg" class="card-img-top" alt="Candy Machine">
+                <div class="card-body">
+                    <h6 class="card-text text-center"><b>Figura 1.</b> Esquema Máquina de Dulces</h6>
+                </div>
+            </div>
+
+            <p>
+                Este proyecto se puede modelar a partir de 3 tablas: Productos, Celdas y Máquina de Dulces. Entre sus relacionestenemos que, una celda la componen productos, y a su vez, una máquina de dulces tiene celdas.
+                De esta forma, nuestro diagrama UML resulta de la siguiente manera
+                (ver <a href="#fig-2">Figura 2</a> ):
+            </p>
+
+            <div id="fig-2" class="card px-auto mx-auto my-5" style="width: 60%;">
                 <img src="./assets/uml.svg" class="card-img-top" alt="Diagrama UML">
                 <div class="card-body">
-                    <h6 class="card-text text-center"><b>Figura 1.</b> Diagrama UML del proyecto</h6>
+                    <h6 class="card-text text-center"><b>Figura 2.</b> Diagrama UML de la máquina de dulces.</h6>
                 </div>
             </div>
         </section>
 
         <section class="container" id="desarrollo">
-            <h2 class="mt-5 p-5 text-center">Desarrollo del Problema</h2>
+            <h2 class="mt-5 p-5 text-center">Desarrollo</h2>
 
-            <p>Con base en la documentación proporcionada y el análisis del diagrama UML, el desarrollo de este ejercicio se empieza creando el objeto de tipo <em><strong>Electrodomestico</strong></em>, sus constantes y atributos, contructores y métodos de acuerdo a las condiciones establecidas.</p>
+            <p>
+                Como se comenta en la <a href="#doc">documentación</a>, cada método implementado tiene una clase
+                <strong>Test</strong> asociada que evalua su funcionamiento. En este ocasión solo se mostrará el
+                funcionamiento de los métodos más relevantes con el fin de explicar la metodología del trabajo, para la
+                solución completa puede explorar el repositorio del código en <a
+                    href="https://github.com/Filipchi/CandyMachine_code">github</a>. <br><br>
 
-            <p>Seguidamente se procede a realizar este mismo procedimiento con los objetos "hijos", en los cuales tenemos a los objetos <em><strong>Televisor</strong></em> y <em><strong>Lavadora</strong></em> los cuales heredan los atriutos de los contructores del padre.</p>
+                De acuerdo a lo anterior, en las Figuras <a href="#fig-3">3</a> y <a href="#fig-4">4</a> se presentan los códigos desarrollados para los métodos <i>incrementarProductos</i> y <i>venderConCambio</i> respectivamente. Del código se puede apreciar que se utiliza la colección de <b>ArrayList</b> para recorrer el conjuto de elementos de la celda. Por otro lado, a modo de buenas prácticas, se trabaja con la nomeclatura <b>camelCase</b> para las variables, y los métodos getter para culplir con el principio de encapsulamiento. 
+            </p>
 
-            <p>Finalmente se desarrolla la clase <em><strong>PrecioTotal</strong> con el fin de sumar el valor neto de cada objeto ingresado por el usuario y mostrar el resultado en pantalla.</em></p>
+            <div id="fig-3" class="card px-auto mx-auto my-5" style="width: 75%;">
+                <img src="./assets/incrementar.png" class="card-img-top" alt="Candy Machine">
+                <div class="card-body">
+                    <h6 class="card-text text-center"><b>Figura 3.</b> Implementación del método incrementarProductos.</h6>
+                </div>
+            </div>
 
+            <div id="fig-4" class="card px-auto mx-auto my-5" style="width: 75%;">
+                <img src="./assets/venderCambio.png" class="card-img-top" alt="Candy Machine">
+                <div class="card-body">
+                    <h6 class="card-text text-center"><b>Figura 4.</b> Implementación del método venderConCambio.</h6>
+                </div>
+            </div>
         </section>
 
         <section class="container" id="resultados">
+            <h2 class="mt-5 p-5 text-center">Resultados</h2>
 
-            <h2 class="mt-5 p-5 text-center"> Resultados </h2>
-            <p>En la <b>Figura 2</b> se presentan las 2 sentenccias de prueba propuesta por el ejercicio. En estas se puede observar que son dos listas de objetos del tipo <em><strong>Electrodomestico[]</strong></em> que se componen de todas las opciones posibles:</p>
+            <p>
+                Con el fin de dar continuidad al resultado de los métodos mostrados anteriormente en las figuras <a href="#fig-5">5</a> y <a href="#fig-6">6</a> se presenta el código de las respectivas clases Test con su respuesta en consola.
+            </p>
 
-            <div class="card px-auto" style="width: 100%;">
-                <img src="./assets/esperado.png" class="card-img-top" alt="Sentencias de prueba">
+            <div id="fig-5" class="card px-auto mx-auto my-5" style="width: 75%;">
+                <img src="./assets/resIncrementar.png" class="card-img-top" alt="Candy Machine">
                 <div class="card-body">
-                    <h6 class="card-text text-center"><b>Figura 2.</b> Sentencias de prueba</h6>
+                    <h6 class="card-text text-center"><b>Figura 5.</b> Respuesta del test TestIncrementarProductos.</h6>
                 </div>
             </div>
-            <br><br>
-            <p>Ahora, en la <b>Figura 3</b> se muestra el resultado obtenido por medio del código programado:</p>
 
-            <div class="card px-auto mx-auto" style="width: 70%;">
-                <img src="./assets/resultado.png" class="card-img-top" alt="Sentencias de prueba">
+            <div id="fig-6" class="card px-auto mx-auto my-5" style="width: 75%;">
+                <img src="./assets/resVenderCambio.png" class="card-img-top" alt="Candy Machine">
                 <div class="card-body">
-                    <h6 class="card-text text-center"><b>Figura 2.</b> Sentencias de prueba</h6>
+                    <h6 class="card-text text-center"><b>Figura 6.</b> Respuesta del test TestVenderConCambio.</h6>
                 </div>
             </div>
-            <br><br>
-            <p>Se puede evidenciar que cada resultado coincide, por lo tanto se da por resuelto el problema presentado.</p>
+
         </section>
 
         <footer class="container-fluid bg-dark">
